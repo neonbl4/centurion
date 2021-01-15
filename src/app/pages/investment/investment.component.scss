@@ -1,0 +1,10 @@
+@import '../../../_vars';
+
+//overwrite styles
+.background-image-pages {
+  background-position: 70% 70% !important;
+
+  .transparent-layer {
+    background-color: rgba(255,255,255, 0.5) !important;
+  }
+}

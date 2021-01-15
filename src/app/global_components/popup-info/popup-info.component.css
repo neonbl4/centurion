@@ -1,0 +1,57 @@
+/*
+ * Input Fields + Forms
+ */
+.info-box {
+  position: absolute;
+  left: 50%;
+  margin-left: -140px;
+  top: 50%;
+  width: 280px;
+  height: 320px;
+  margin-top: -170px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  border: 2px solid white;
+  z-index: 5000;
+}
+
+.info-box-headline {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 12%;
+  font-size: 22px;
+  color: white;
+}
+
+.info-box-text {
+  position: relative;
+  width: 80%;
+  height: 50%;
+  text-align: center;
+  margin: 10px auto;
+  line-height: 1.6em;
+  /*max-height: 50%;*/
+  /*overflow-y: auto;*/
+  /*-webkit-overflow-scrolling: touch;*/
+  font-size: 13px;
+  display: table;
+  overflow: hidden;
+  color: white;
+  border: 0px solid red;
+}
+
+.info-box-buttons {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 2%;
+  /*border: 1px solid red;*/
+  text-align: center;
+}
+.info-box-buttons .popup-button {
+  font-size: 11px;
+  width: 35%;
+}
+
+/*# sourceMappingURL=popup-info.component.css.map */

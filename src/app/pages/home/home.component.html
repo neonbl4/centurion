@@ -1,0 +1,99 @@
+
+<div class="parallax" id="parallax-1" data-image-src="../../../assets/images/architecture-4877146_1920.jpg" [attr.data-height]="data_height_1">
+  <div class="flex-container-1 is-flex-container">
+    <section class="section-1-inner" [@inner-text-ani]="animate_inner_text ? true : false">
+        <span class="headline-centurion">
+            Centurion Partners
+        <br>
+            Holding GmbH
+        </span>
+        <div class="sub-text-container">
+            <span class="sub-text-centurion">
+                Full-Service-Dienstleister für Anlageimmobilien weltweit mit den Schwerpunkten Asien und Europa
+            </span>
+        </div>
+
+    </section>
+    <div class="scroll-down-button">
+        <img src="../../../assets/images/arrow-circle-down-solid-white.svg">
+    </div>
+  </div>
+</div>
+
+<div class="text-container-1 is-flex-container">
+    <div class="section">
+        <div class="col left-column">
+            <div id="text-1" class="text-inner-container-left" [@fade-in]="fade_in_1 ? true : false">
+                <div class="headline">
+                    Mehrdimensional managen
+                </div>
+                <div class="sub-text">
+                    Wir decken als Full Service Dienstleister alle Dimensionen rund um das Management von Anlageimmobilien ab. Dies beinhaltet alle Belange auf Mieter-, Objekt- sowie Gesellschafterebene.
+                </div>
+            </div>
+        </div>
+        <div class="col right-column">
+            <div class="image-inner-container-right">
+                <img id="logo-1" class="" src="../assets/images/centurion-partners-holding-gmbh.svg">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="parallax" id="parallax-2" data-image-src="../../../assets/images/Hochhaus.jpg" [attr.data-height]="data_height_2">
+    <div class="flex-container-2 is-flex-container">
+        <section class="section-2-inner">
+            <div class="headline"><h2>Fachgebiete</h2></div>
+            <!--<div class="fachgebiete-container"></div>-->
+            <div class="section-fachgebiete">
+                <div class="col span_1_of_2 left">
+                    <a [@fade-in-circle-1]="fade_in_circle_1 ? true : false" id="circle-1" class="content-link no-select" routerLink="/ueber-uns"><div class="circle-item no-select"><h3 [innerHTML]="circle_text_1"></h3></div></a>
+                    <a [@fade-in-circle-2]="fade_in_circle_2 ? true : false" id="circle-2" class="content-link no-select" routerLink="/management" [queryParams]="{id: 'PropertyManagement'}"><div class="circle-item no-select"><h3 [innerHTML]="circle_text_2"></h3></div></a>
+                </div>
+                <div class="col span_1_of_2 right">
+                    <a [@fade-in-circle-3]="fade_in_circle_3 ? true : false" id="circle-3" class="content-link no-select" routerLink="/management" [queryParams]="{id: 'AssetManagement'}"><div class="circle-item no-select"><h3 [innerHTML]="circle_text_3"></h3></div></a>
+                    <a [@fade-in-circle-4]="fade_in_circle_4 ? true : false" id="circle-4" class="content-link no-select" routerLink="/management" [queryParams]="{id: 'Projektsteuerung'}"><div class="circle-item no-select"><h3 [innerHTML]="circle_text_4"></h3></div></a>
+                </div>
+            </div>
+            <div class="section-fachgebiete" style="margin-top: 0">
+                <div class="col span_1_of_2 left">
+                    <a [@fade-in-circle-5]="fade_in_circle_5 ? true : false" id="circle-5" class="content-link no-select" routerLink="/management" [queryParams]="{id: 'CenterManagement'}"><div class="circle-item no-select"><h3 [innerHTML]="circle_text_5"></h3></div></a>
+                    <a [@fade-in-circle-6]="fade_in_circle_6 ? true : false" id="circle-6" class="content-link no-select" routerLink="/vermietung"><div class="circle-item no-select"><h3 [innerHTML]="circle_text_6"></h3></div></a>
+                </div>
+                <div class="col span_1_of_2 right">
+                    <a [@fade-in-circle-7]="fade_in_circle_7 ? true : false" id="circle-7" class="content-link no-select" routerLink="/investment"><div class="circle-item no-select"><h3 [innerHTML]="circle_text_7"></h3></div></a>
+                    <a [@fade-in-circle-8]="fade_in_circle_8 ? true : false" id="circle-8" class="content-link no-select" routerLink="/management" [queryParams]="{id: 'Fondsmanagement'}"><div class="circle-item no-select"><h3 [innerHTML]="circle_text_8"></h3></div></a>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="text-container-2 is-flex-container">
+    <div class="section">
+        <div class="col span_1_of_1">
+            <div id="text-2" class="single-row" [@fade-in]="fade_in_2 ? true : false">
+                <div>
+                    <span class="headline-content-home-font">Ihr Starker Partner -<br>
+                    Wir sind anders als unsere Wettbewerber<br>
+                    </span>
+                </div>
+                <div class="sub-text-container">
+                    <span class="subtext-content-font">Unser Fokus liegt darauf, die Interessen unserer Kunden beim Managen von Anlageimmobilien zu vertreten
+                    und erfolgreich durchzusetzen. Die Rolle des Immobilieneigentümers können wir nur übernehmen,
+                    weil wir als international agierender Immobilienmanager frei von etwaigen Interessenkonflikten sind.
+                    Diese Freiheit versetzt uns in die Lage, jede Situation aus dem Blickwinkel des Eigentümers zu bewerten
+                    und dann für den Kunden optimale Entscheidungen zu treffen. Die notwendige Objektivität wäre schwer möglich,
+                    wenn wir eine Immobiliendienstleistungsgesellschaft wären, die an einen Baukonzern,
+                    einem Maklerhaus oder eine Bank angeschlossen ist.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<app-newsletter-anmeldung></app-newsletter-anmeldung>
+
+

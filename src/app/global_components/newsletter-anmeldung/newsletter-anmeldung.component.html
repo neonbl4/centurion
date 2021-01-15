@@ -1,0 +1,25 @@
+<div class="newsletter-container is-flex-container">
+  <div class="section">
+    <div class="col span_1_of_1">
+      <div class="single-row">
+        <div class="headline-newsletter">Newsletter-Anmeldung</div>
+        <div class="subtext-newsletter">Melden Sie sich hier an, um die neuesten Informationen zu erhalten.</div>
+        <div class="input-row">
+          <input id="firstname" placeholder="Vorname" maxlength="60" spellcheck="false" autocomplete="false">
+          <input id="lastname" placeholder="Nachname" maxlength="60" spellcheck="false" autocomplete="false">
+          <input id="email" placeholder="E-mail Adresse" maxlength="60" spellcheck="false" autocomplete="false">
+        </div>
+        <div class="checkbox-row">
+          <label class="checkbox-container">Meine Daten dürfen verwendet werden, um mich im Zuge meiner Anfrage zu kontaktieren.
+            <input type="checkbox" name="accept-newsletter" id="accept-newsletter" (click)="onClickCheckbox( $event )" checked>
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="button-row">
+          <button (click)="onClickSend()" class="basic-button">ABSENDEN</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

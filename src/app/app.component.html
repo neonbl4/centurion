@@ -1,4 +1,156 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div id="scroll-start">
+    <div id="underlayer" class="hide-underlay"></div>
+    <div id="mobile-menu" class="mobile-menu is-closed">
+        <div class="nav-item-container">
+            <div class="nav-item" (click)="clickMobileMenuNavItem('/')"><a (click)="clickMobileMenuNavItem('/')" class="content-link" [routerLink]="'/'" [routerLinkActive]="'link-active'" [routerLinkActiveOptions]="{ exact: true }">HOME</a></div>
+            <div class="nav-item" (click)="clickMobileMenuNavItem('/ueber-uns')"><a (click)="clickMobileMenuNavItem('/ueber-uns')" class="content-link" [routerLink]="'/ueber-uns'" [routerLinkActive]="'link-active'">ÜBER UNS</a></div>
+            <div class="nav-item" (click)="clickMobileMenuNavItem('/management')"><a (click)="clickMobileMenuNavItem('/management')" class="content-link" [routerLink]="'/management'" [routerLinkActive]="'link-active'">MANAGEMENT</a></div>
+            <div class="nav-item" (click)="clickMobileMenuNavItem('/vermietung')"><a (click)="clickMobileMenuNavItem('/vermietung')" class="content-link" [routerLink]="'/vermietung'" [routerLinkActive]="'link-active'">VERMIETUNG</a></div>
+            <div class="nav-item" (click)="clickMobileMenuNavItem('/investment')"><a (click)="clickMobileMenuNavItem('/investment')" class="content-link" [routerLink]="'/investment'" [routerLinkActive]="'link-active'">INVESTMENT</a></div>
+            <div class="nav-item" (click)="clickMobileMenuNavItem('/kontakt')"><a (click)="clickMobileMenuNavItem('/kontakt')" class="content-link" [routerLink]="'/kontakt'" [routerLinkActive]="'link-active'">KONTAKT</a></div>
+            <div class="nav-item" style="border-bottom: none">
+                <table class="table-tel-mail">
+                    <tr>
+                        <td (click)="clickTel()"><img src="../assets/images/tel.jpg"></td>
+                        <td (click)="clickEmail()" style="border-left: 2px solid #dcdcdc"><img src="../assets/images/mail.jpg"></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="header sticky" id="myHeader" [@header_ani_package]="animate_header ? true : false" [@header_y_ani]="animate_header ? true : false">
+        <div id="header-top-container" class="header-top-container">
+            <div class="section section-header" style="text-align: center; height: 24px">
+                <div class="col span_1_of_1"></div>
+            </div>
+            <div class="section section-header" style="text-align: center">
+                <div class="col span_1_of_3">
+                    <div id="text-container-left" class="text-container-left" [@header_text_left_ani]="animate_header ? true : false">
+                        <span class="tel-number">02173 / 265 03 7</span><br>
+                        <span class="address">Lerchenweg 3, 40789 Monheim am Rhein</span>
+                    </div>
+                    <div id="hamburger-container-left" class="hamburger-container-left">
+                        <div class="hamburger-button">
+                            <div (click)="clickHamburger()" id="hamburger" class="hamburger hamburger--spin" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="true/false">
+                                <span class="hamburger-box">
+                                  <span class="hamburger-inner"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span_1_of_3">
+                    <div class="logo-container">
+                        <img style="outline: none; cursor: pointer" routerLink="/" src="../assets/images/centurion-partners-holding-gmbh.svg" [@logo_ani]="animate_header ? true : false">
+                    </div>
+                </div>
+                <div class="col span_1_of_3">
+                    <div id="icon-container-right" class="icon-container-right" [@header_icons_right_ani]="animate_header ? true : false">
+                        <a href="https://www.facebook.com/centurion.partner.7" target="_blank" class="href-icons"><div class="icon-facebook"><i class="fab fa-facebook-f"></i></div></a>
+                        <a href="https://www.instagram.com/centurion.partner.gmbh/" target="_blank" class="href-icons"><div class="icon-instagram"><i class="fab fa-instagram"></i></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="desktop-navigation" class="navigation-container">
+            <div class="section">
+                <div class="col span_1_of_1">
+                    <div class="main-width-navi">
+                        <nav class="main-navi">
+                            <a class="content-link" [routerLink]="'/'" [routerLinkActive]="'link-active'" [routerLinkActiveOptions]="{ exact: true }">HOME</a>
+                            <div class="navi-item-spacer">/</div>
+                            <a class="content-link" [routerLink]="'/ueber-uns'" [routerLinkActive]="'link-active'">ÜBER UNS</a>
+                            <div class="navi-item-spacer">/</div>
+                            <a class="content-link" [routerLink]="'/management'" [routerLinkActive]="'link-active'">MANAGEMENT</a>
+                            <div class="navi-item-spacer">/</div>
+                            <a class="content-link" [routerLink]="'/vermietung'" [routerLinkActive]="'link-active'">VERMIETUNG</a>
+                            <div class="navi-item-spacer">/</div>
+                            <a class="content-link" [routerLink]="'/investment'" [routerLinkActive]="'link-active'">INVESTMENT</a>
+                            <div class="navi-item-spacer">/</div>
+                            <a class="content-link" [routerLink]="'/kontakt'" [routerLinkActive]="'link-active'">KONTAKT</a>
+                        </nav>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="content">
+       <router-outlet></router-outlet>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="section">
+                <div class="col span_1_of_3">
+                    <div class="adress-footer">Adresse</div>
+                    <div class="adress-text">
+                        Lerchenweg 3
+                        <br>
+                        40789 Monheim am Rhein
+                        <br>
+                        <br>
+                        Tel: 02173 / 265 03 7
+                        <br>
+                        Fax: 02173 / 265 03 8
+                    </div>
+                </div>
+                <div class="col span_1_of_3">
+                    <img id="logo-footer" class="logo-inverted" src="../assets/images/centurion-partners-holding-gmbh-logo-inverse.svg">
+                </div>
+                <div class="col span_1_of_3">
+                    <div style="border: 0px solid blue;">
+                        <a class="href-footer" routerLink="/impressum">Impressum</a>
+                        |
+                        <a class="href-footer" routerLink="/datenschutz">Datenschutz</a>
+                        |
+                        <a class="href-footer" routerLink="/agbs">AGB's</a>
+                        <br>
+                        <a href="https://www.dev4media.com" target="_blank" class="href-footer">Powered by dev4media.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section" style="padding-bottom: 50px">
+                <div class="section-footer-bottom">
+                    <div class="col-outer"><div class="line"></div></div>
+                    <div class="col-inner">
+                        <a href="https://www.facebook.com/centurion.partner.7" target="_blank">
+                            <div class="circle circle-facebook">
+                                <i style="color: white" class="fab fa-facebook-f"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/centurion.partner.gmbh/" target="_blank">
+                            <div class="circle circle-instagram">
+                                <i style="color: white" class="fab fa-instagram"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-outer"><div class="line"></div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="button-top" class="button-top" (click)="scrollToTop()">
+    <img src="../../../assets/images/chevron-up.svg" width="24">
+</div>
+
+<div class="cookie-banner" [@cookie-ani]="cookie_ani ? true : false">
+    <div class="item-left">
+        Diese Website verwendet Cookies, um sicherzustellen, dass Sie die beste Performance auf unserer Website erhalten.
+        <span class="more-info-text" (click)="onClickMoreInfoCookie()">Mehr dazu</span>
+    </div>
+    <div class="item-right">
+        <div class="button-deny" (click)="onClickDenyCookies()">Verweigern</div>
+        <button class="button-ok" (click)="onClickAcceptyCookies()">OK</button>
+    </div>
+</div>
+
+<app-popup-info></app-popup-info>

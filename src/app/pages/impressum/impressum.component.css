@@ -1,0 +1,36 @@
+/*
+ * Input Fields + Forms
+ */
+h3 {
+  font-size: 24px;
+  color: #212226;
+  font-weight: normal;
+}
+@media only screen and (max-width: 900px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+.headline-impressum {
+  font-size: 48px;
+  color: black;
+}
+@media only screen and (max-width: 900px) {
+  .headline-impressum {
+    font-size: 30px;
+  }
+}
+
+.headline-2-impressum {
+  font-size: 30px;
+  color: black;
+  line-height: 2rem;
+}
+@media only screen and (max-width: 900px) {
+  .headline-2-impressum {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=impressum.component.css.map */

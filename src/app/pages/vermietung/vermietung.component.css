@@ -1,0 +1,11 @@
+/*
+ * Input Fields + Forms
+ */
+.background-image-pages {
+  background-position: 50% 30% !important;
+}
+.background-image-pages .transparent-layer {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/*# sourceMappingURL=vermietung.component.css.map */

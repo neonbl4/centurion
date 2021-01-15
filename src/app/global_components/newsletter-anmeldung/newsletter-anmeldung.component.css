@@ -1,0 +1,143 @@
+/*
+ * Input Fields + Forms
+ */
+.newsletter-container {
+  background-color: #ffffff;
+  height: auto;
+}
+.newsletter-container .single-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 940px;
+  border: 0px solid black;
+  margin: 126px auto;
+  padding: 10px;
+  background-color: #f3f3f3;
+  padding: 30px;
+  color: #444444;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 900px) {
+  .newsletter-container .single-row {
+    width: 93%;
+    margin-top: 60px;
+    margin-bottom: 60px !important;
+    padding: 20px;
+  }
+}
+.newsletter-container .single-row .headline-newsletter {
+  border: 0px solid black;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #dc0e00;
+}
+.newsletter-container .single-row .subtext-newsletter {
+  text-align: center;
+  margin-top: 10px;
+}
+.newsletter-container .single-row .checkbox-row {
+  width: 420px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border: 0px solid black;
+}
+@media only screen and (max-width: 500px) {
+  .newsletter-container .single-row .checkbox-row {
+    width: 260px !important;
+  }
+}
+.newsletter-container .single-row .checkbox-row .checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* When the checkbox is checked, add a blue background */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+  /* Create a custom checkbox */
+  /* Create the checkmark/indicator (hidden when not checked) */
+}
+.newsletter-container .single-row .checkbox-row .checkbox-container input {
+  position: absolute;
+  opacity: 0 !important;
+  cursor: pointer;
+  height: 0px !important;
+  width: 0px !important;
+  display: none !important;
+  left: -9999px;
+}
+@media only screen and (min-width: 900px) {
+  .newsletter-container .single-row .checkbox-row .checkbox-container {
+    /* On mouse-over, add a grey background color */
+  }
+  .newsletter-container .single-row .checkbox-row .checkbox-container:hover input ~ .checkmark {
+    background-color: #c1bfbf;
+  }
+}
+.newsletter-container .single-row .checkbox-row .checkbox-container input:checked ~ .checkmark {
+  background-color: #960219;
+}
+.newsletter-container .single-row .checkbox-row .checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.newsletter-container .single-row .checkbox-row .checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.newsletter-container .single-row .checkbox-row .checkbox-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #c1bfbf;
+}
+.newsletter-container .single-row .checkbox-row .checkbox-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.newsletter-container .single-row .input-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+}
+.newsletter-container .single-row .input-row > input {
+  width: 420px;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 500px) {
+  .newsletter-container .single-row .input-row > input {
+    width: 260px !important;
+  }
+}
+.newsletter-container .single-row .button-row {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=newsletter-anmeldung.component.css.map */

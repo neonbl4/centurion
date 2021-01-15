@@ -1,0 +1,46 @@
+<div *ngIf="is_open" id="overlay-popup" class="overlay-popup-info">
+  <div class="info-box">
+    <!--<div style="position: absolute; right: 10px; top:10px; cursor: pointer" (click)="onClickClose()">
+      <img src="{{button_close}}" width="20">
+    </div>
+    -->
+
+    <div class="info-box-headline big-headline">
+      {{headline}}
+
+      <!--
+      <span *ngIf="is_demo" (click)="onClickHiddenHeadline('admin')" style="font-size: 8px; cursor: pointer; color: black">Admin</span>
+      <span *ngIf="is_demo">{{headline}}</span>
+      <span *ngIf="is_demo" (click)="onClickHiddenHeadline('account')" style="font-size: 8px; cursor: pointer; color: black">Account</span>
+      <span *ngIf="is_demo" (click)="onClickHiddenHeadline('christina')" style="font-size: 8px; cursor: pointer; color: black">Christina</span>
+      -->
+
+
+    </div>
+    <div *ngIf="this.popup_type == 'info_popup'" class="info-box-text vcenter">
+      <div style="display: table-cell; vertical-align: middle;">
+        <div [innerHTML]="text">
+
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="this.popup_type == 'login_popup'" class="info-box-text vcenter">
+      <div style="display: table-cell; vertical-align: middle;">
+        <input id="email" placeholder="E-mail Adresse" type="email" maxlength="50" spellcheck="false" style="width: 90%; margin-top: 10px">
+        <input id="password" placeholder="Passwort" type="password" maxlength="20" spellcheck="false" style="width: 90%; margin-top: 10px">
+        <br>
+        <!--<span style="font-size: 14px; padding-top: 4px" class="content-href-link" (click)="onClickForgottenPassword()">PASSWORT VERGESSEN ?</span>-->
+      </div>
+
+    </div>
+
+    <div class="info-box-buttons">
+      <button *ngIf="show_cancel_button" (click)="onClickClose()" class="main-button popup-button" style="margin:20px; font-weight:normal;">ABBRECHEN</button>
+      <button *ngIf="show_ok_button" (click)="onClickOK()" class="main-button popup-button" style="margin:20px; font-weight:bold;">{{button_ok_text}}</button>
+
+    </div>
+  </div>
+
+</div>
+

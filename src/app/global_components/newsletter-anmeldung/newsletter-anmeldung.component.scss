@@ -1,0 +1,157 @@
+@import '../../../_vars';
+
+.newsletter-container {
+  background-color: #ffffff;
+  height: auto;
+
+  .single-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 940px;
+    border: 0px solid black;
+    margin: 126px auto;
+    padding: 10px;
+    background-color: #f3f3f3;
+    padding: 30px;
+    color: #444444;
+
+    border-radius: 10px;
+
+    @media only screen and (max-width: $switch-mobile-size) {
+      width: 93%;
+      margin-top: 60px;
+      margin-bottom: 60px !important;
+      padding: 20px;
+    }
+
+    .headline-newsletter {
+      border: 0px solid black;
+      margin: 0 auto;
+      text-align: center;
+
+      font-size: 26px;
+      font-weight: bold;
+
+      color: #dc0e00;
+    }
+
+    .subtext-newsletter {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .checkbox-row {
+      width: 420px;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      border: 0px solid black;
+
+      @media only screen and (max-width: 500px) {
+        width: 260px !important;
+      }
+
+      //IF we want to use checkboxes in formulars
+      .checkbox-container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        padding-top: 3px;
+        cursor: pointer;
+        font-size: $input-fields-font-size;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        /* Hide the browser's default checkbox */
+        & input {
+          position: absolute;
+          opacity: 0 !important;
+          cursor: pointer;
+          height: 0px !important;
+          width: 0px !important;
+          display: none  !important;
+          left: -9999px;
+        }
+
+        //only do on big screens
+        @media only screen and (min-width: $switch-mobile-size) {
+          /* On mouse-over, add a grey background color */
+          &:hover input ~ .checkmark {
+            background-color: #c1bfbf;
+          }
+        }
+
+
+        /* When the checkbox is checked, add a blue background */
+        & input:checked ~ .checkmark {
+          background-color: $basic-icon-hover-color;
+        }
+
+        /* Show the checkmark when checked */
+        & input:checked ~ .checkmark:after {
+          display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        & .checkmark:after {
+          left: 9px;
+          top: 5px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          background-color: #c1bfbf;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+      }
+    }
+
+    .input-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 10px;
+
+      >input {
+        width: 420px;
+        margin-top: 10px;
+
+        @media only screen and (max-width: 500px) {
+          width: 260px !important;
+        }
+      }
+    }
+
+    .button-row {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+}

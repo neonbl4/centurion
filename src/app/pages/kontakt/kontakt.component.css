@@ -1,0 +1,49 @@
+/*
+ * Input Fields + Forms
+ */
+.background-image-pages {
+  background-position: 50% 0% !important;
+}
+.background-image-pages .transparent-layer {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.inner-flex-container {
+  height: 360px !important;
+}
+.inner-flex-container .item-left {
+  height: 140px !important;
+  padding-right: 20px !important;
+  padding-top: 20px !important;
+}
+.inner-flex-container .item-right {
+  height: 140px !important;
+  text-align: center !important;
+  padding-top: 20px !important;
+}
+.inner-flex-container .item-right .social {
+  display: inline-flex;
+}
+.inner-flex-container .item-right .social .circle {
+  border: 3px solid black;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.inner-flex-container .item-right .social .circle.circle-facebook {
+  padding-top: 1px;
+}
+.inner-flex-container .item-right .social .circle.circle-facebook .fa-facebook-f {
+  font-size: 16px;
+}
+.inner-flex-container .item-right .social .circle.circle-instagram {
+  padding-top: 2px;
+  padding-left: 0px;
+}
+.inner-flex-container .item-right .social .circle.circle-instagram .fa-instagram {
+  font-size: 19px;
+}
+
+/*# sourceMappingURL=kontakt.component.css.map */
